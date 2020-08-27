@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class SolutionTest{
@@ -36,6 +37,7 @@ public class SolutionTest{
 	}
 	
 	@Test
+	@Ignore
 	public void test4() {
 		measureAlgorythm("Solution:", s);
 		measureAlgorythm("bruteForce", bruteForce);
@@ -49,11 +51,11 @@ public class SolutionTest{
 		int[] sol1 = s.solution(K, M, a1);
 		int[] sol2 = bruteForce.solution(K, M, a2);
 		Assert.assertArrayEquals(sol1, sol2);
-		if (sol1.length > 0) {
-			System.out.println("Leaders: " + Arrays.toString(sol1));
-		}else {
-			System.out.println("No leaders");
-		}
+//		if (sol1.length > 0) {
+//			System.out.println("Leaders: " + Arrays.toString(sol1));
+//		}else {
+//			System.out.println("No leaders");
+//		}
 	}
 
 	/** Mide el tiempo de ejecucion de un algoritmo dado*/
